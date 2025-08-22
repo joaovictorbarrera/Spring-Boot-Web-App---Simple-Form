@@ -1,4 +1,4 @@
-# Spring-Boot-Web-App---Simple-Form
+# Spring-Boot-Web-App-COP3330
 ## Joao Barrera - Software Development I CEN-3024C-13950
 ### COP 3330 Project 8: Greeting
 
