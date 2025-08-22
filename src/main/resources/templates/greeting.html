@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Greeting Form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1 class="big-title">Joao Barrera — COP 3330 Project 8: Greeting</h1>
+
+      <p class="notice">Please enter your student ID, a date, and a message below.</p>
+
+      <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+        <p>
+          <label for="id">Student ID:</label>
+          <input type="number" th:field="*{id}" min="0" id="id" required />
+        </p>
+
+        <p>
+          <label for="content">Message:</label>
+          <input type="text" th:field="*{content}" id="content" required />
+        </p>
+
+        <p id="error" th:if="${error}" th:text="${error}"></p>
+
+        <div class="date-group">
+          <p>Date:</p>
+          <div class="date-inputs">
+            <div>
+              <label for="month">Month</label>
+              <input type="number" th:field="*{month}" id="month" min="1" max="12" required />
+            </div>
+            <div>
+              <label for="day">Day</label>
+              <input type="number" th:field="*{day}" id="day" min="1" max="31" required />
+            </div>
+            <div>
+              <label for="year">Year</label>
+              <input type="number" th:field="*{year}" id="year" min="1900" max="2100" required />
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <input type="submit" value="Enter Data" />
+          <input type="reset" value="Clear" />
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

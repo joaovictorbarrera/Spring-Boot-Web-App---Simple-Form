@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Greeting Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="medium-title">Joao Barrera — COP 3330 Project 8: Results</h1>
+            <p class="subtitle">Here is the data you entered:</p>
+
+            <p th:text="'Student ID: ' + ${greeting.id}"></p>
+            <p th:text="'Message: ' + ${greeting.content}"></p>
+            <p th:text="'Date: ' + ${greeting.month} + '/' + ${greeting.day} + '/' + ${greeting.year}"></p>
+
+            <a href="/greeting">Submit another message</a>
+        </div>
+    </div>
+</body>
+</html>
